@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>隨便吃集團</title>
+    <style type="text/css">
+	body{
+		background-color: #e5e5f7;
+		opacity: 0.8;
+		background-image: linear-gradient(45deg, #fdfcec 50%, #e5e5f7 50%);
+		background-size: 10px 10px;
+	}
+    ul.navigation li{
+				position: relative;
+				float: left;
+				list-style: none;/*放在這*/
+			}	
+			/*選單li裡面連結之樣式*/
+			ul.navigation li a{
+				display: block;
+				padding: 15px 35px;
+				background: #8DAD69;
+				color: #FFF;
+				text-decoration: none;
+			}
+			/*特定在第一層,以左邊灰線分割*/
+			ul.navigation > li> a{
+				border-bottom: 1px solid #CCC;
+				border-left: 1px solid #CCC;
+			}
+			ul.navigation > li> a:hover{
+				border-bottom: #666;
+				border-left: #DDD;
+			}
+			ul.navigation li a:hover{
+				border-bottom: #666;
+				border-left: #DDD;
+			}
+			/*以下為多層選單的樣式 第2層*/
+			ul.navigation li ul{
+				display: none;
+				float: left;
+				position: absolute;
+				margin: 0;	/*靠左對齊*/
+				padding: 0;
+			}
+			ul.navigation li:hover > ul{
+				display: block;
+			}
+			ul.navigation ul li{
+				border-bottom: 1px solid #DDD;
+			}
+			/*特定在第2層或之後下拉部分li之樣式*/
+			ul.navigation ul li:last-child{
+				border-bottom: none;
+			}
+			/*以下為多層選單的樣式 第3層*/
+			ul.navigation ul a{
+				width: 142px;
+				padding: 10px 12px;
+				color: #666;
+				background: #EEE;
+			}
+			ul.navigation ul a:hover{
+				background: #CCC;
+			}
+			ul.navigation ul li:hover > ul{
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 100%;
+			}
+			/*箭頭向下*/
+			.arrow-bottom{
+				display: inline-block;
+				margin-left: 5px;
+				border-top: 4px solid #FFF;
+				border-right: 4px solid transparent;
+				border-left: 4px solid transparent;
+				width: 1px;
+				height: 1px;
+			}
+			/*箭頭向右*/
+			.arrow-right{
+				display: inline-block;
+				margin-left: 12px;
+				border-top: 3px solid transparent;
+				border-bottom: 3px solid transparent;
+				border-left: 3px solid #666;
+				width: 1px;
+				height: 1px;
+			}
+            
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; font-size: 40px; color: rgba(0, 17, 255, 0.849);">隨便吃蛋糕</h1>
+    <div id="menu" style="padding-left: 555px;">
+        <ul class="navigation">
+            <li> <a href="about.html">關於隨便吃</a>
+            </li>			  	
+            <li> <a href="salad.html">隨便吃沙拉</a>
+            </li>
+            <li> <a href="soup.html">隨便吃湯品</a>
+              </li>
+            <li> <a>隨便吃主食</a>
+                <ul>
+                    <li> <a>肉</a>
+                        <ul>
+                        <li><a href="chicken.html">雞肉</a></li>
+                        <li><a href="beef.html">牛肉</a></li>
+                      </ul>
+                    </li>
+                    <li> <a href="seafood.html">海鮮</a>
+                    </li>
+                  </ul>
+            </li>	
+            <li> <a>隨便吃甜點</a>
+                <ul>
+                    <li><a href="cake.html">蛋糕</a></li>
+                    <li><a href="ice_cream.html">冰淇淋</a></li>
+                </ul>
+            </li>		  
+        </ul>
+    </div>
+    <br><br><br><br>
+    <div style="padding-left: 490px;"> 
+        <img src="cake.jpg" width="450ox" height="300px">&emsp;&emsp;&emsp;
+        <img src="cake2.jpg" width="450ox" height="300px">
+    </div>
+    <div style="padding-left: 650px; font-size: 20px;">
+        <label>覆盆子乳酪蛋糕</label>
+        <label style="padding-left: 390px">千層蛋糕</label>
+    </div>
+    <br>
+    <div style="padding-left: 490px;"> 
+        <img src="cake3.jpg" width="450ox" height="300px">&emsp;&emsp;&emsp;
+    </div>
+    <div style="padding-left: 650px; font-size: 20px;">
+        <label>巴斯克乳酪蛋糕</label>
+    </div>
+    <br>
+    <div style="padding-left: 940px;">
+        <a href="web.html">回首頁</a>
+    </div>     
+</body>
+</html>

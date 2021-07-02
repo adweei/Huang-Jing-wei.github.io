@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>註冊頁面</title>
+    <style type="text/css">
+			body{
+				background-image: url('demo03.png');
+				background-repeat: no-repeat;
+       			background-attachment: fixed;
+       			background-position: center;
+       			background-size: cover;
+			}  
+    	p{
+			font-weight: 700;
+				padding-left: 290px;
+        		font-size: 45px;
+        		font-family: Hack, sans-serif;
+        		text-transform: uppercase;
+        		color: rgba(0, 17, 255, 0.849);
+        		background: linear-gradient(90deg, rgb(79, 250, 0), #fff, rgb(79, 250, 0));
+        		letter-spacing: 5px;
+        		-webkit-background-clip: text;
+        		background-clip: text;
+        		-webkit-text-fill-color: transparent;
+        		background-repeat: no-repeat;
+        		background-size: 80%;
+        		animation: shine 7s linear infinite;
+        		position: relative;
+    			}
+
+    		@keyframes shine {
+        		0% {
+            		background-position-x: -500%;
+        		}
+        		100% {
+            		background-position-x: 500%;
+        		}
+    		}
+      	.main{
+				margin: 0 auto;
+				padding: 10px;
+				width: 840px;
+				height: 600px;
+				background: #61e2c6be;
+			}
+    	.leftbar{
+        		font-family: "標楷體";
+				width: 30%;
+				padding-bottom: 15px;
+				padding-left: 70px;
+				display: inline-block;
+				text-align: right;
+			}
+    	.bot{
+				padding-left: 495px;	
+				padding-bottom: 15px;
+			}
+      	.bottom{
+				display: inline-block;
+				padding: 5px 10px;
+				border-radius: 10px;
+				color: aqua;
+				background-color: blue;
+			}
+		.bottom:hover {
+    			background-color: red; /* Green */
+    			color: white;
+			}
+    </style>
+  </head>
+  <body>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <div class="main">
+    <p>註&nbsp;冊&nbsp;介&nbsp;面</p>
+    <form name="form" method="post" action="con_reg_mysql.php">
+      <label><div class="leftbar" style="font-size: 30px;">姓名：</div><input type="text" name="name" placeholder="請輸入姓名" style="font-size:17px;"/></label> <br>
+      <label><div class="leftbar" style="font-size: 30px;">帳號：</div><input type="text" name="username" placeholder="請輸入帳號" style="font-size:17px;"/></label> <br>
+      <label><div class="leftbar" style="font-size: 30px;">密碼：</div><input type="password" name="password" placeholder="請輸入密碼" style="font-size:17px;"/></label>  <br>
+      <label><div class="leftbar" style="font-size: 30px;">再一次輸入密碼：</div><input type="password" name="password2" placeholder="請再輸入一次密碼" style="font-size:17px;"/></label>  <br>
+      <div class="bot"><input type="submit" name="button" value="確定" class="bottom"/></div>
+    </form>
+    </div>
+  </body>
+</html>

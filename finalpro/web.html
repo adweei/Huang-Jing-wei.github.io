@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/lib/w3.css">
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+			<script type="text/javascript">
+				$(function(){
+					$("ul.navigation > li:has(ul) > a").append('<div class="arrow-bottom"></div>');
+					$("ul.navigation > li ul li:has(ul) > a").append('<div class="arrow-right"></div>');
+				});
+			</script>
+
+		<style type="text/css">
+		body{
+			background-color: #e5e5f7;
+			opacity: 0.8;
+			background-image: linear-gradient(45deg, #fdfcec 50%, #e5e5f7 50%);
+			background-size: 10px 10px;
+		}
+
+		h1 {
+        font-weight: 700;
+        text-align: center;
+        font-size: 40px;
+        font-family: Hack, sans-serif;
+        text-transform: uppercase;
+        color: rgba(0, 17, 255, 0.849);
+        background: linear-gradient(90deg, rgba(0, 17, 255, 0.849), #fff, rgba(0, 17, 255, 0.849));
+        letter-spacing: 5px;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-repeat: no-repeat;
+        background-size: 80%;
+        animation: shine 5s linear infinite;
+        position: relative;
+    	}
+
+    	@keyframes shine {
+        	0% {
+            	background-position-x: -500%;
+        	}
+        	100% {
+            	background-position-x: 500%;
+        	}
+    	}
+			ul.navigation li{
+				position: relative;
+				float: left;
+				list-style: none;/*放在這*/
+			}	
+			/*選單li裡面連結之樣式*/
+			ul.navigation li a{
+				display: block;
+				padding: 15px 35px;
+				background: #8DAD69;
+				color: #FFF;
+				text-decoration: none;
+			}
+			/*特定在第一層,以左邊灰線分割*/
+			ul.navigation > li> a{
+				border-bottom: 1px solid #CCC;
+				border-left: 1px solid #CCC;
+			}
+			ul.navigation > li> a:hover{
+				border-bottom: #666;
+				border-left: #DDD;
+			}
+			ul.navigation li a:hover{
+				border-bottom: #666;
+				border-left: #DDD;
+			}
+			/*以下為多層選單的樣式 第2層*/
+			ul.navigation li ul{
+				display: none;
+				float: left;
+				position: absolute;
+				margin: 0;	/*靠左對齊*/
+				padding: 0;
+			}
+			ul.navigation li:hover > ul{
+				display: block;
+			}
+			ul.navigation ul li{
+				border-bottom: 1px solid #DDD;
+			}
+			/*特定在第2層或之後下拉部分li之樣式*/
+			ul.navigation ul li:last-child{
+				border-bottom: none;
+			}
+			/*以下為多層選單的樣式 第3層*/
+			ul.navigation ul a{
+				width: 142px;
+				padding: 10px 12px;
+				color: #666;
+				background: #EEE;
+			}
+			ul.navigation ul a:hover{
+				background: #CCC;
+			}
+			ul.navigation ul li:hover > ul{
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 100%;
+			}
+			/*箭頭向下*/
+			.arrow-bottom{
+				display: inline-block;
+				margin-left: 5px;
+				border-top: 4px solid #FFF;
+				border-right: 4px solid transparent;
+				border-left: 4px solid transparent;
+				width: 1px;
+				height: 1px;
+			}
+			/*箭頭向右*/
+			.arrow-right{
+				display: inline-block;
+				margin-left: 12px;
+				border-top: 3px solid transparent;
+				border-bottom: 3px solid transparent;
+				border-left: 3px solid #666;
+				width: 1px;
+				height: 1px;
+			}
+
+			.mySlides {display:none;}		
+		</style>
+	</head>
+	<body style="background-color:azure;">
+		<h1 style="text-align: center; font-size: 40px; color: rgba(0, 17, 255, 0.849);">隨便吃</h1>
+		<!--下拉式選單-->
+		<div id="menu" style="padding-left: 530px;">
+			<ul class="navigation">
+				<li> <a href="about.html">關於隨便吃</a>
+				</li>			  	
+				<li> <a href="salad.html">隨便吃沙拉</a>
+				</li>
+				<li> <a href="soup.html">隨便吃湯品</a>
+			  	</li>
+				<li> <a>隨便吃主食</a>
+					<ul>
+						<li> <a>肉</a>
+							<ul>
+							<li><a href="chicken.html">雞肉</a></li>
+							<li><a href="beef.html">牛肉</a></li>
+						  </ul>
+						</li>
+						<li> <a href="seafood.html">海鮮</a>
+						</li>
+					  </ul>
+				</li>	
+				<li> <a>隨便吃甜點</a>
+					<ul>
+						<li><a href="cake.html">蛋糕</a></li>
+						<li><a href="ice_cream.html">冰淇淋</a></li>
+					</ul>
+				</li>		  
+			</ul>
+		</div>
+		<br><br><br><br><br>
+		<!--幻燈片-->
+		<div class="picture" style="max-width:500px; padding-left: 710px; width: 600px; height: 300px;">
+			<a href="salad.html"><img class="mySlides" src="salad.jpg" style="width:100%; "></a>
+			<a href="soup.html"><img class="mySlides" src="soup3.jpg" style="width:100%; "></a>
+			<a href="soup.html"><img class="mySlides" src="cornsoup.jpg" style="width:100%; "></a>
+			<a href="beef.html"><img class="mySlides" src="beef.jpg" style="width:100%; "></a>	
+			<a href="seafood.html"><img class="mySlides" src="seafood.jpg" style="width:100%; "></a>
+			<a href="cake.html"><img class="mySlides" src="cake.jpg" style="width:100%; "></a>
+		</div>
+		<br><br><br>
+		<div style="width: 850px; padding-left: 550px;">
+			<marquee direction="right" height="30" scrollamount="10" behavior="alternate" style="font-size: 25px;">防疫期間，請勿到處亂跑，推薦在家玩<a href="http://game.granbluefantasy.jp/">這個</marquee></a>
+		</div>
+
+		<script>
+			var myIndex = 0;
+				carousel();
+			function carousel() {
+				var i;
+				var x = document.getElementsByClassName("mySlides");
+				for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none";  
+				}
+				myIndex++;
+				if (myIndex > x.length) {myIndex = 1}    
+				x[myIndex-1].style.display = "block";  
+				setTimeout(carousel, 3000); // Change image every 3 seconds
+			}
+			</script>
+	</body>
+</html>
